@@ -21,7 +21,12 @@ class Character extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Image.asset("images/di1.png", width: 150),
+                    GestureDetector(
+                      onTap: () {
+                        print("image tap!");
+                      },
+                      child: Image.asset("images/di1.png", width: 150),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20, bottom: 10),
                       child: Container(
