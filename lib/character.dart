@@ -1,3 +1,4 @@
+import 'package:dinosaur_card/detailed.dart';
 import 'package:flutter/material.dart';
 
 class Character extends StatelessWidget {
@@ -23,7 +24,9 @@ class Character extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        print("image tap!");
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Detailed()),
+                        );
                       },
                       child: Image.asset("images/di1.png", width: 150),
                     ),
