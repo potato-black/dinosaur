@@ -1,3 +1,4 @@
+import 'package:dinosaur_card/detailed.dart';
 import 'package:flutter/material.dart';
 
 class Character extends StatelessWidget {
@@ -21,7 +22,14 @@ class Character extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Image.asset("images/di1.png", width: 150),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Detailed()),
+                        );
+                      },
+                      child: Image.asset("images/di1.png", width: 150),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20, bottom: 10),
                       child: Container(
