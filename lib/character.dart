@@ -25,7 +25,18 @@ class Character extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => Detailed()),
+                          MaterialPageRoute(
+                            builder: (context) => Detailed(
+                              name: "Tyranosaurs Rex",
+                              period: "백악기 후기",
+                              taste: "육식",
+                              length: "12-15m",
+                              weight: "7톤",
+                              color: Colors.green,
+                              description: "잘알려진 육식공룡",
+                              imagePath: "images/di1.png",
+                            ),
+                          ),
                         );
                       },
                       child: Image.asset("images/di1.png", width: 150),
